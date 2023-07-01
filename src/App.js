@@ -1,23 +1,22 @@
 import './App.css';
 import React from "react";
-import Nav from "./components/Nav.js";
 import Footer from "./components/Footer.js";
 import Header from "./components/Header.js";
 import Hero from "./components/Hero.js"
 import Highlights from "./components/Highlights.js"
 import Testimonials from './components/Testimonials';
-
+import About from './components/About'
 
 function App() {
   return (
-      <main>
-        <Header />
-        <Nav />
-        <Hero />
-        <Highlights />
-        <Testimonials />
-        <Footer />
-      </main>
+        <main>
+          <Header />
+          <Hero />
+          <Highlights />
+          <Testimonials />
+          <About />
+          <Footer />
+        </main>
   );
 }
 
