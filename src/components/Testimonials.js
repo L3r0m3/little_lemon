@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, HStack, Stack} from "@chakra-ui/react";
+import {Box, Stack} from "@chakra-ui/react";
 import Lee from "../images/lee.png";
 import Ashanty from "../images/ashanty.png";
 import Paul from "../images/paul.png";
@@ -30,28 +30,25 @@ const propavatar = [
     }
 ]
 
-
 const Testimonials = () => {
     return (
-        <Stack p={90} bgColor='#EDEFEE99'>
-        <Box>
-            <HStack
-            display="flex"
-            margin="10%"
-            justifyContent="space-evenly"
-            backgroundColor="#EDEFEE99"
-            direction={['column', 'column', 'row']}
-            >
-                {propavatar.map((propavatar) => (
-                    <Ravatar
-                        name={propavatar.name}
-                        staricon={propavatar.staricon}
-                        imageSrc={propavatar.imageSrc}
-                    />
-                ))}
-            </HStack>
+        <Box bg='#EDEFEE' p={{base : '10%', sm: '30%', md: '15%'}}>
+            <Box>
+                <Stack
+                    display="flex"
+                    direction={['column', 'column', 'row']}
+                    justify='center'
+                >
+                    {propavatar.map((propavatar) => (
+                        <Ravatar
+                            name={propavatar.name}
+                            staricon={propavatar.staricon}
+                            imageSrc={propavatar.imageSrc}
+                        />
+                    ))}
+                </Stack>
+            </Box>
         </Box>
-        </Stack>
     )
 }
 

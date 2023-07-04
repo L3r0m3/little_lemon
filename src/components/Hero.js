@@ -1,33 +1,29 @@
 import React from "react";
 import HeroImage from "../images/four-bruchetta2.png"
+import {Button, Heading, Image, VStack, Stack, Box, Text } from "@chakra-ui/react";
 
 const Hero = () => {
     return (
-        <div className="hero-container">
-            <div className="hero-row">
-                <div className="hero-col">
-                    <div>
-                        <h1>Little Lemon</h1>
-                        <h6>Chicago</h6>
-                    </div>
-                    <div>
-                        <article>
-                            <p>
-                                We are a family owned Mediterranean<br></br>
-                                restaurant,focused on traditional recipes<br></br>
-                                served with a modern twist.
-                            </p>
-                        </article>
-                        <button className="button" type="button">
-                            Reserve a Table
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <img id="hero-img" src={HeroImage}></img>
-                </div>
-            </div>
-        </div>
+        <Box alignItems='center' bg='#495E57'>
+            <Stack
+            display='flex'
+            direction={['column', 'column','row']}
+            justify='center'
+            p={10}
+            >
+                <VStack alignItems='flex-start' justify='center' boxSize='md'>
+                <Heading color='#F4CE14'>Little Lemon</Heading>
+                <Text fontWeight='bold' fontSize='sm'>Chicago</Text>
+                <Text fontSize={{sm: 'xl', md:'2xl'}} maxW={300} noOfLines={5}>We are a family owned Mediterranean
+                    restaurant, focused on traditional recipes
+                    served with a modern twist.</Text>
+                <Box pt={10}>
+                    <Button bg='#F4CE14' _hover={{bg: 'green',}}>Reserve a table</Button>
+                </Box>
+                </VStack>
+                <Image borderRadius='16px' m={5} src={HeroImage} minW='256' minH='292'></Image>
+            </Stack>
+        </Box>
     )
 }
 

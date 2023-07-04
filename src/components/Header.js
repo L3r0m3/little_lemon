@@ -1,11 +1,11 @@
 import React from "react";
-import {Box, HStack,Link, Stack, Image, Flex} from "@chakra-ui/react";
+import {Box, HStack,Link, Image, Flex} from "@chakra-ui/react";
 import Logo from '../images/little_logo.png'
 
 
 const Header = () => {
     return (
-        <Box margin='5%' justify='center'>
+        <Box m='5%'>
             <Flex justify='center'>
             <HStack>
             <Image w='130px' h='50px' src={Logo}></Image>

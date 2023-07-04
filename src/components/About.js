@@ -1,35 +1,33 @@
 import React from "react";
-import { Heading, Image, Box, Text,Flex} from "@chakra-ui/react";
+import { Heading, Image, Box, Text, Stack, VStack} from "@chakra-ui/react";
 import Mario from '../images/Mario and Adrian A.jpg';
 import Adrian from '../images/Mario and Adrian b.jpg';
 
 const About = () => {
      return (
-        <Box>
-            <Box
-            as='section'
-            p={100}
-            bg='#495E57'
-            spacing='25px'
-            >
-                <Flex justify='center' direction={['column', 'column', 'row']}>
-                    <Box w='300px'>
+            <Box bg='#495E57'>
+                <Stack
+                    display='flex'
+                    direction={['column', 'column', 'row']}
+                    textAlign={['left', 'left', 'left']}
+                    p={{base : 'null', sm: 'null', md: '5%'}}
+                >
+                    <VStack alignItems='flex-start' m={10}>
                         <Heading>Little Lemon</Heading>
                         <Text fontWeight='bold'>Chicago</Text>
-                        <Text noOfLines={5}>
+                        <Text fontSize={20} minW={300} maxW={800} noOfLines={8}>
                             At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
                             no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.
                         </Text>
+                    </VStack>
+                    <Box>
+                        <Image minW={312} minH={312} w={825} h={362} borderRadius={16} src={Mario}></Image>
                     </Box>
                     <Box>
-                        <Image ml='20px' borderRadius={16} boxSize='250px' src={Mario}></Image>
+                        <Image minW={312} minH={312} w={825} h={362} borderRadius={16} src={Adrian}></Image>
                     </Box>
-                    <Box>
-                        <Image ml='20px' borderRadius={16} boxSize='250px' src={Adrian}></Image>
-                    </Box>
-                </Flex>
+                </Stack>
             </Box>
-        </Box>
     )
 }
 

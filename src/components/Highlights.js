@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Box, Text, HStack} from "@chakra-ui/react";
+import { Button, Box, Text, HStack, Stack} from "@chakra-ui/react";
 import Greeksalad from "../images/greek-salad.png"
 import Bruchetta from "../images/cheese-bruchetta.png"
 import Lemondessert from "../images/lemon-dessert.jpg"
@@ -31,32 +31,27 @@ const specials = [
 
 const Highlights = () => {
     return (
-        <Box>
-            <HStack margin="40px" display="flex" justifyContent="space-evenly">
-                <Text fontWeight="bold" fontSize="25px">This Week Specials!</Text>
-                <Button fontSize="18px"
-                        width="150px"
-                        height="40px"
-                        border="none"
-                        backgroundColor="#F4CE14"
-                        borderRadius="16px"
+        <Box m={20}>
+            <Box>
+                <HStack p={5} justify='space-around'>
+                    <Box><Text fontWeight="bold" fontSize="25px">This Week Specials!</Text></Box>
+                    <Box><Button backgroundColor="#F4CE14">Online Menu</Button></Box>
+                </HStack>
+                <Stack
+                    display="flex"
+                    direction={['column', 'column', 'row']}
+                    justify='center'
                 >
-                    Online Menu
-                </Button>
-            </HStack>
-            <Box
-                display="flex"
-                justifyContent="center"
-            >
-                {specials.map((specials) => (
-                <Card
-                    price={specials.price}
-                    key={specials.title}
-                    title={specials.title}
-                    description={specials.description}
-                    imageSrc={specials.imageSrc}
-                />
-                ))}
+                        {specials.map((specials) => (
+                        <Card
+                            price={specials.price}
+                            key={specials.title}
+                            title={specials.title}
+                            description={specials.description}
+                            imageSrc={specials.imageSrc}
+                        />
+                        ))}
+                </Stack>
             </Box>
         </Box>
     )
