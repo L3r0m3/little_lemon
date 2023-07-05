@@ -15,16 +15,37 @@ const About = () => {
                     <VStack alignItems='flex-start' m={10}>
                         <Heading>Little Lemon</Heading>
                         <Text fontWeight='bold'>Chicago</Text>
-                        <Text fontSize={20} minW={300} maxW={800} noOfLines={8}>
-                            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-                            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.
+                        <Text
+                            fontSize={20}
+                            minW={300}
+                            maxW={800}
+                            noOfLines={8}
+                        >
+                            At vero eos et accusam et justo duo dolores et ea rebum.
+                            Stet clita kasd gubergren,
+                            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet, consetetur sadipscing.
                         </Text>
                     </VStack>
                     <Box>
-                        <Image minW={312} minH={312} w={525} h={290} borderRadius={16} src={Mario}></Image>
+                        <Image
+                            minW={312}
+                            minH={312}
+                            w={525}
+                            h={290}
+                            borderRadius={16}
+                            src={Mario}>
+                        </Image>
                     </Box>
                     <Box>
-                        <Image minW={312} minH={312} w={525} h={290} borderRadius={16} src={Adrian}></Image>
+                        <Image
+                            minW={312}
+                            minH={312}
+                            w={525}
+                            h={290}
+                            borderRadius={16}
+                            src={Adrian}>
+                        </Image>
                     </Box>
                 </Stack>
             </Box>
