@@ -242,7 +242,7 @@ const MobileNavItem = ({ label, children, href }) => {
 const NavItem = [
   {
     label: 'Home',
-    href: '#'
+    href: '/'
   },
   {
     label: 'About',
@@ -253,7 +253,7 @@ const NavItem = [
     children: [
       {
         subLabel: 'Reserve a table',
-        href: '#',
+        href: '/booking',
       },
       {
         subLabel: 'Cancel reservation',

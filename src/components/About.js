@@ -10,7 +10,7 @@ const About = () => {
                     display='flex'
                     direction={['column', 'column', 'row']}
                     textAlign={['left', 'left', 'left']}
-                    p={{base : 'null', sm: 'null', md: '5%'}}
+                    p={{base : '10%', sm: '5%', md: '10%'}}
                 >
                     <VStack alignItems='flex-start' m={10}>
                         <Heading>Little Lemon</Heading>
@@ -21,10 +21,10 @@ const About = () => {
                         </Text>
                     </VStack>
                     <Box>
-                        <Image minW={312} minH={312} w={825} h={362} borderRadius={16} src={Mario}></Image>
+                        <Image minW={312} minH={312} w={525} h={290} borderRadius={16} src={Mario}></Image>
                     </Box>
                     <Box>
-                        <Image minW={312} minH={312} w={825} h={362} borderRadius={16} src={Adrian}></Image>
+                        <Image minW={312} minH={312} w={525} h={290} borderRadius={16} src={Adrian}></Image>
                     </Box>
                 </Stack>
             </Box>
