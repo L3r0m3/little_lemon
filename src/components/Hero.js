@@ -44,7 +44,7 @@ const Hero = () => {
                     <Link href='/booking'>
                         <Button
                             bg='#F4CE14'
-                            _hover={{bg: 'green',}}
+                            _hover={{bg: '#EDEFEE',}}
                             >Reserve a table
                         </Button>
                     </Link>

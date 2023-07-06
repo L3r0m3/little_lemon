@@ -52,7 +52,9 @@ export default function WithSubnavigation() {
           />
         </Flex>
         <Flex flex={{ base: 2 }} justify={{ base: 'center', md: 'start' }}>
-          <Image src={Logo} w='130px' h='40px'></Image>
+          <Link href='/'>
+            <Image src={Logo} w='130px' h='40px'></Image>
+          </Link>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10} >
             <DesktopNav />
           </Flex>
@@ -68,7 +70,7 @@ export default function WithSubnavigation() {
             fontSize={'md'}
             fontWeight={400}
             variant={'link'}
-            href={'#'}>
+            href={''}>
             Login
           </Button>
           <Button
@@ -78,9 +80,9 @@ export default function WithSubnavigation() {
             fontWeight={600}
             color={'black'}
             bg={'#F4CE14'}
-            href={'#'}
+            href={'/signup'}
             _hover={{
-              bg: 'green',
+              bg: '#EDEFEE',
             }}>
             Sign Up
           </Button>

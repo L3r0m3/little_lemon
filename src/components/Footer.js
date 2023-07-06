@@ -7,13 +7,19 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="logo-footer">
-                        <img alt='logo-footer' className="logo-footer" src={little_logo}></img>
+                        <a href='/'>
+                            <img
+                             alt='logo-footer'
+                             className="logo-footer"
+                             src={little_logo}>
+                            </img>
+                        </a>
                     </div>
                     <div className="footer-col">
                         <ul><h4>Doormat Navigation</h4>
-                            <li><a href="#/Home">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="#/About">About</a></li>
-                            <li><a href="#/Reservation">Reservation</a></li>
+                            <li><a href="/booking">Reservation</a></li>
                             <li><a href="#/Order Online">Order Online</a></li>
                             <li><a href="#/Login">Login</a></li>
                         </ul>
