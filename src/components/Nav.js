@@ -70,7 +70,7 @@ export default function WithSubnavigation() {
             fontSize={'md'}
             fontWeight={400}
             variant={'link'}
-            href={''}>
+            href={'/login'}>
             Login
           </Button>
           <Button
@@ -102,7 +102,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack mt={2} direction={'row'} spacing={4}>
       {NavItem.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>

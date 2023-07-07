@@ -4,6 +4,7 @@ import Homepage from './Homepage';
 import BookingPage from './BookingPage';
 import Signup from './Signup';
 import BookingDetails from './BookingDetails';
+import LoginPage from './LoginPage'
 
 const Main = () => {
     return (
@@ -12,6 +13,7 @@ const Main = () => {
             <Route path="/booking" element={<BookingPage />}></Route>
             <Route path="/signup" element={<Signup />}></Route>
             <Route path="/booking-details" element={<BookingDetails />}></Route>
+            <Route path="/login" element={<LoginPage />}></Route>
         </Routes>
     )
 }

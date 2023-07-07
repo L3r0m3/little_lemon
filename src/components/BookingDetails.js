@@ -85,14 +85,14 @@ const BookingDetails = () => {
                             <Icon mt={5} w={10} h={20} as={MdCreditCard} />
                         </HStack>
                         <VStack>
-                            <RadioGroup isDisabled defaultValue='2'>
+                            <RadioGroup defaultValue='2'>
                                 <VStack spacing={5} direction='row'>
                                     <HStack>
-                                        <Text>Send me booking comfirmation via Text</Text>
+                                        <Text>Send me booking comfirmation via email</Text>
                                         <Radio colorScheme='red' value='1' />
                                     </HStack>
                                     <HStack>
-                                        <Text>Send me booking comfirmation via Text</Text>
+                                        <Text>Send me booking comfirmation via SMS</Text>
                                         <Radio colorScheme='green' value='2' />
                                     </HStack>
                                 </VStack>
