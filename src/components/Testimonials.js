@@ -8,22 +8,22 @@ import StarIcon from "../images/staricon.png";
 import Ravatar from "./Ravatar";
 
 const propavatar = [
-    {
+    {   id: 1,
         name: "Lee",
         staricon: StarIcon,
         imageSrc: Lee,
     },
-    {
+    {   id: 2,
         name: "Ashanty",
         staricon: StarIcon,
         imageSrc: Ashanty,
     },
-    {
+    {   id: 3,
         name: "Paul",
         staricon: StarIcon,
         imageSrc: Paul,
     },
-    {
+    {   id: 4,
         name: "Bella",
         staricon: StarIcon,
         imageSrc: Bela,
@@ -41,6 +41,7 @@ const Testimonials = () => {
                 >
                     {propavatar.map((propavatar) => (
                         <Ravatar
+                            key={propavatar.id}
                             name={propavatar.name}
                             staricon={propavatar.staricon}
                             imageSrc={propavatar.imageSrc}

@@ -104,7 +104,7 @@ const DesktopNav = () => {
   return (
     <Stack mt={2} direction={'row'} spacing={4}>
       {NavItem.map((navItem) => (
-        <Box key={navItem.label}>
+        <Box key={navItem.id}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
               <Link
@@ -131,7 +131,7 @@ const DesktopNav = () => {
                 minW={'sm'}>
                 <Stack>
                   {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
+                    <DesktopSubNav key={child.id} {...child} />
                   ))}
                 </Stack>
               </PopoverContent>
@@ -143,7 +143,7 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href, subLabel }) => {
+const DesktopSubNav = ({ label, id, href, subLabel }) => {
   return (
     <Link
       href={href}
@@ -151,7 +151,9 @@ const DesktopSubNav = ({ label, href, subLabel }) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('#F4CE14', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('#F4CE14', 'gray.900') }}
+      key={id}
+      >
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
@@ -184,7 +186,7 @@ const MobileNav = () => {
       p={4}
       display={{ md: 'none' }}>
       {NavItem.map((navItem) => (
-        <MobileNavItem key={navItem.label} {...navItem} />
+        <MobileNavItem key={navItem.id} {...navItem} />
       ))}
     </Stack>
   );
@@ -230,7 +232,7 @@ const MobileNavItem = ({ label, children, href }) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.id} py={2} href={child.href}>
                 {child.label}
               </Link>
             ))}
@@ -243,21 +245,24 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NavItem = [
   {
+    id: 1,
     label: 'Home',
     href: '/'
   },
   {
+    id: 2,
     label: 'About',
     href:'#'
   },
   {
+    id: 3,
     label: 'Reservation',
     children: [
-      {
+      { id: 5,
         subLabel: 'Reserve a table',
         href: '/booking',
       },
-      {
+      { id: 6,
         subLabel: 'Cancel reservation',
         href: '#',
       },
@@ -265,9 +270,10 @@ const NavItem = [
   },
 
   {
+    id: 4,
     label: 'Order Online',
     children: [
-      {
+      { id: 7,
         label: 'Online Menu',
         subLabel: 'Online Menu',
         href: '#',

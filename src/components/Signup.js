@@ -1,6 +1,5 @@
 import React from "react";
 import { useFormik } from "formik";
-import Nav from '../components/Nav.js';
 import {
   Box,
   Button,
@@ -16,11 +15,11 @@ import {
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import useSubmit from '../hooks/useSubmit.js'
-// import {useAlertContext} from "../context/alertContext";
+
 
 const Signup = () => {
   const { isLoading, submit } = useSubmit();
-  // const { onOpen } = useAlertContext();
+
 
   const formik = useFormik({
     initialValues: {
@@ -32,7 +31,7 @@ const Signup = () => {
       comment: ''
     },
     onSubmit: (values) => {
-      submit('https://john.com/contactme', values);
+      submit('', values);
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required("Required"),
@@ -46,7 +45,6 @@ const Signup = () => {
 
   return (
     <ChakraProvider>
-      <Nav />
     <Stack
       display='grid'
       backgroundColor="#495E57"

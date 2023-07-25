@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import Nav from '../components/Nav';
+
 import {
     Box,
     Heading,
@@ -18,18 +18,22 @@ import {
     InputGroup,
     InputRightElement
     } from "@chakra-ui/react";
-    import  {GoogleIcon, FacebookIcon, AppleIcon, LinkedinIcon} from '../Icons/SocialIcon';
+
+    import {GoogleIcon,
+         FacebookIcon,
+         AppleIcon,
+         LinkedinIcon
+        } from '../Icons/SocialIcon';
 
 const LoginPage = () => {
         const [input, setInput] = useState('');
         const handleInputChange = (e) => setInput(e.target.value);
         const isError = input === '';
-        const [show, setShow] = useState(false)
-        const handleClick = () => setShow(!show)
+        const [show, setShow] = useState(false);
+        const handleClick = () => setShow(!show);
 
     return (
         <ChakraProvider>
-            <Nav />
             <Stack
              display='grid'
              bg='#495E57'
@@ -37,10 +41,10 @@ const LoginPage = () => {
              spacing={8}
              justify={['center', 'center', 'center']}
             >
-                <Heading ml={120} >Login</Heading>
+                <Heading ml={100} >Login</Heading>
                 <HStack display='flex' justify='center'>
                     <Link><Button bg='#F4CE14'>Login</Button></Link>
-                    <Link><Button bg='#EE9972'>Signup</Button></Link>
+                    <Link><Button bg='#EE9972'>Sign Up</Button></Link>
                 </HStack>
                 <Box
                     border='1px'
@@ -51,7 +55,7 @@ const LoginPage = () => {
                     maxW={['320', '560']}
                     >
                     <VStack>
-                    <FormControl>
+                    <FormControl isInvalid={isError}>
                         <FormLabel color='white'>Email</FormLabel>
                         <Input
                          bg='white'
@@ -61,7 +65,7 @@ const LoginPage = () => {
                          onChange={handleInputChange}
                         />
                         {!isError ? (
-                            <FormHelperText>
+                            <FormHelperText color='red'>
                                 Enter email
                             </FormHelperText>
                         ) : (
@@ -83,7 +87,11 @@ const LoginPage = () => {
                                 </Button>
                             </InputRightElement>
                         </InputGroup>
-                            <Link color='#EE9972' textAlign='left' fontSize={13}>Forgot password?</Link>
+                            <Link
+                             color='#EE9972'
+                             textAlign='left'
+                             fontSize={13}>
+                            Forgot password?</Link>
                         </FormControl>
                     </VStack>
                 </Box>

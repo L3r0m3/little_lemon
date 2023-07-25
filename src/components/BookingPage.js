@@ -1,5 +1,4 @@
-import Nav from './Nav';
-import React from 'react';
+import {React} from 'react';
 
 import {
     ChakraProvider,
@@ -11,22 +10,20 @@ import {
     Link,
     Button,
     Flex,
-    Select,
     HStack,
-    Input,
-    Radio, RadioGroup} from "@chakra-ui/react";
-import TableImage from '../images/little-table.jpg'
-import TableSvg1 from '../images/dining-table1.png'
-import TableSvg2 from '../images/dining-table.png'
-import NewYork from '../images/newyork.jpg'
+  } from "@chakra-ui/react";
+
+import TableImage from '../images/little-table.jpg';
+import TableSvg1 from '../images/dining-table1.png';
+import TableSvg2 from '../images/dining-table.png';
+import NewYork from '../images/newyork.jpg';
+import BookingForm from './BookingForm';
 
 
-const BookingPage = () => {
-    const [value, setValue] = React.useState('1')
+const BookingPage = ({availableTimes, SubmitForm, state, dispatch, handleChange}) => {
 
     return (
         <ChakraProvider>
-            <Nav />
             <Stack>
                 <Box
                     display='grid'
@@ -67,7 +64,7 @@ const BookingPage = () => {
                             </Text>
                         </Box>
                         <Box>
-                            <Image  w={320} h={420} src={NewYork}></Image>
+                            <Image w={320} h={420} src={NewYork}></Image>
                         </Box>
                     </Box>
                     </HStack>
@@ -85,50 +82,16 @@ const BookingPage = () => {
                         <VStack>
                             <Text fontWeight='bold' m={5}>1-4 Seat</Text>
                             <Box m={5}>
-                                <Image maxW={90} maxH={90} src={TableSvg1}></Image>
+                                <Image
+                                 maxW={90}
+                                 maxH={90}
+                                 src={TableSvg1}>
+                                </Image>
                             </Box>
                         </VStack>
-                        <Box>
-                            <Select
-                             isRequired
-                             mb={1}
-                             bg='#F4CE14'
-                             placeholder='Number of Diners'
-                            >
-                                <option value='option1'>1</option>
-                                <option value='option2'>2</option>
-                                <option value='option3'>3</option>
-                                <option value='option3'>4</option>
-                                <option value='option3'>5</option>
-                                <option value='option3'>6</option>
-                                <option value='option3'>7</option>
-                                <option value='option3'>8</option>
-                            </Select>
-                            <Input isRequired
-                                placeholder="Select Date and Time"
-                                size="md"
-                                mb={1}
-                                bg='#F4CE14'
-                                type="datetime-local"
-                            />
-                            <Select mb={1} bg='#F4CE14' placeholder='Location'>
-                                <option value='option1'>New York</option>
-                                <option value='option2'>Chicago</option>
-                                <option value='option3'>Springfield</option>
-                            </Select>
-                            <Select mb={1} bg='#F4CE14' placeholder='Occation'>
-                                <option value='option1'>Birthday</option>
-                                <option value='option2'>Engagement</option>
-                                <option value='option3'>Anniversary</option>
-                            </Select>
-                            <Text mb={1} fontSize={18}>Seating Option</Text>
-                            <RadioGroup onChange={setValue} value={value}>
-                                <Stack direction='row'>
-                                    <Radio value='1'>Standard</Radio>
-                                    <Radio value='2'>Outside</Radio>
-                                </Stack>
-                            </RadioGroup>
-                        </Box>
+                        <Stack data-testid="res-time">
+                            <BookingForm SubmitForm={SubmitForm} state={state}  dispatch={dispatch} availableTimes={availableTimes} handleChange={handleChange}/>
+                        </Stack>
                         <VStack>
                             <Text fontWeight='bold' m={5}>5-8 Seat</Text>
                             <Box m={5}>

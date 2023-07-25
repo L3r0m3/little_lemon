@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from '../components/Nav'
+
 import {
   Box,
   Button,
@@ -21,7 +21,6 @@ import { MdCreditCard } from 'react-icons/md'
 const BookingDetails = () => {
   return (
         <ChakraProvider>
-            <Nav />
             <Stack
                 display='grid'
                 backgroundColor="#495E57"
