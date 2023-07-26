@@ -18,8 +18,8 @@ const Main = () => {
         date: '',
         time: '',
         guests: '1',
-        occasion: 'Birthday',
-        location: 'New York',
+        occasion: '',
+        location: '',
         env: 'Standard',
     };
 

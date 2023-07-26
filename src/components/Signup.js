@@ -102,6 +102,7 @@ const Signup = () => {
                 <Input
                   bg='white'
                   textColor='black'
+                  type="tel"
                   id="phoneNumber"
                   name="phoneNumber"
                   onChange={formik.handleChange}
