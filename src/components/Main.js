@@ -146,7 +146,7 @@ const Main = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/booking-details" element={<BookingDetails />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/booking-confirmed" element={<ConfirmedBooking />} />
+          <Route path="/booking-confirmed" element={<ConfirmedBooking SubmitForm={SubmitForm} state={state} time={state.time} date={state.date} />} />
           <Route
             path=""
             element={
