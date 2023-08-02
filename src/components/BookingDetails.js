@@ -18,7 +18,14 @@ import {
 import { Icon } from '@chakra-ui/react'
 import { MdCreditCard } from 'react-icons/md'
 
-const BookingDetails = () => {
+
+const BookingDetails = ({time,date, SubmitForm, state}) => {
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        SubmitForm(e);
+      };
+
   return (
         <ChakraProvider>
             <Stack
@@ -43,7 +50,8 @@ const BookingDetails = () => {
                     w="100%"
                     maxW={['320', '560']}
                 >
-                <form>
+                <form onSubmit={onSubmit}>
+                <Text fontSize={20}>{date} {time}</Text>
                 <Text fontSize={20} ml={5} as="h3">
                     Creditcard Details
                 </Text>

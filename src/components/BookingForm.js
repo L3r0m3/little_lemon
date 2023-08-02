@@ -32,7 +32,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                         <FormLabel htmlFor="numberOfGuests">Number of guests:</FormLabel>
                         <Input
                          // bg='#F4CE14'
-                         ariaLabel='On Click'
+                         arialabel='On Click'
                          requred='true'
                          max={12}
                          min={1}
@@ -54,7 +54,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                     <FormControl isRequired>
                         <FormLabel htmlFor="date">Select a date:</FormLabel>
                         <Input
-                         ariaLabel='On Click'
+                         arialabel='On Click'
                          placeholder="Select Date"
                          size="md"
                          mb={1}
@@ -70,7 +70,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                     <FormControl isRequired>
                         <FormLabel htmlFor="available-times">Select time:</FormLabel>
                         <Select
-                         ariaLabel='On Click'
+                         arialabel='On Click'
                          id="time"
                          name='time'
                          value={state.time}
@@ -89,7 +89,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                     <FormControl isRequired>
                         <FormLabel htmlFor="location">Location:</FormLabel>
                         <Select
-                         ariaLabel='On Click'
+                         arialabel='On Click'
                          mb={1}
                          // bg='#F4CE14'
                          placeholder='Location'
@@ -105,7 +105,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                     <FormControl>
                         <FormLabel htmlFor="occasion">Occasion:</FormLabel>
                         <Select
-                         ariaLabel='On Click'
+                         arialabel='On Click'
                          mb={1}
                          // bg='#F4CE14'
                          placeholder='Occasion'
@@ -122,7 +122,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                     <Stack direction='row'>
                         <label>
                          <input
-                         ariaLabel='On Click'
+                         arialabel='On Click'
                          type="radio"
                          onChange={handleChange}
                          data-dispatchtype="updateEnv"
@@ -134,7 +134,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                         </label>
                         <label>
                             <input
-                             ariaLabel='On Click'
+                             arialabel='On Click'
                              type="radio"
                              onChange={handleChange}
                              data-dispatchtype="updateEnv"
@@ -148,7 +148,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                          bg='#F4CE14'
                          onSubmit={SubmitForm}
                          type='submit'
-                         value="Make Your reservation" >Submit
+                         value="Make Your reservation" >Book
                         </Button>
                 </VStack>
                 </form>
