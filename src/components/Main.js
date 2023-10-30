@@ -48,7 +48,7 @@ const Main = () => {
         return new Promise((resolve) => {
         setTimeout(() => {
             resolve(true); // Simulate a success response
-        }, 2000); // Delay in milliseconds (2 seconds in this example)
+        }, 2000); // Delay in milliseconds
         });
     };
 

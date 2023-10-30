@@ -31,7 +31,6 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                     <FormControl isRequired isInvalid={isError}>
                         <FormLabel htmlFor="numberOfGuests">Number of guests:</FormLabel>
                         <Input
-                         // bg='#F4CE14'
                          arialabel='On Click'
                          requred='true'
                          max={12}
@@ -58,7 +57,6 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                          placeholder="Select Date"
                          size="md"
                          mb={1}
-                         // bg='#F4CE14'
                          type="date"
                          id="date"
                          min={new Date().toISOString().slice(0, 10)}
@@ -91,7 +89,6 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                         <Select
                          arialabel='On Click'
                          mb={1}
-                         // bg='#F4CE14'
                          placeholder='Location'
                          value={state.location}
                          onChange={handleChange}
@@ -107,7 +104,6 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                         <Select
                          arialabel='On Click'
                          mb={1}
-                         // bg='#F4CE14'
                          placeholder='Occasion'
                          value={state.occasion}
                          onChange={handleChange}

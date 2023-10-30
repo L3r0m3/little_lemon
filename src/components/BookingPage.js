@@ -98,11 +98,6 @@ const BookingPage = ({availableTimes, SubmitForm, state, dispatch, handleChange}
                         </VStack>
                     </Flex>
                 </Box>
-                {/* <Flex m={20} justify='center'>
-                    <Link href='/booking-details'>
-                        <Button borderRadius={16} minW={400} bg='#F4CE14'>Continue</Button>
-                    </Link>
-                </Flex> */}
             </Stack>
         </ChakraProvider>
     )
