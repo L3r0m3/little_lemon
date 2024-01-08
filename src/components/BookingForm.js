@@ -144,7 +144,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                          bg='#F4CE14'
                          onSubmit={SubmitForm}
                          type='submit'
-                         value="Make Your reservation" >Book
+                         value="Make Your reservation">Book
                         </Button>
                 </VStack>
                 </form>
