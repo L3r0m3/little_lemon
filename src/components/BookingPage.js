@@ -88,7 +88,13 @@ const BookingPage = ({availableTimes, SubmitForm, state, dispatch, handleChange}
                             </Box>
                         </VStack>
                         <Stack data-testid="res-time">
-                            <BookingForm SubmitForm={SubmitForm} state={state}  dispatch={dispatch} availableTimes={availableTimes} handleChange={handleChange}/>
+                            <BookingForm
+                                SubmitForm={SubmitForm}
+                                state={state}
+                                dispatch={dispatch}
+                                availableTimes={availableTimes}
+                                handleChange={handleChange}
+                            />
                         </Stack>
                         <VStack>
                             <Text fontWeight='bold' m={5}>5-8 Seat</Text>
