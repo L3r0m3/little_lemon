@@ -1,7 +1,7 @@
 import React from "react";
-import {Box, Stack} from "@chakra-ui/react";
-import { propavatar } from "../data";
-import Ravatar from "./Ravatar";
+import { Box, Stack } from "@chakra-ui/react";
+import { propavatar } from "../lib/data";
+import Aavatar from "./Avatar";
 
 
 const Testimonials = () => {
@@ -14,7 +14,7 @@ const Testimonials = () => {
                     justify='center'
                 >
                     {propavatar.map((propavatar) => (
-                        <Ravatar
+                        <Aavatar
                             key={propavatar.id}
                             name={propavatar.name}
                             staricon={propavatar.staricon}

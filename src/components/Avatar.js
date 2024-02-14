@@ -7,7 +7,7 @@ import {
     VStack,
     Stack } from "@chakra-ui/react";
 
-const Ravatar = ({name, staricon, imageSrc}) => {
+const Avatar = ({name, staricon, imageSrc}) => {
     return (
         <Stack ml={20}>
             <Box alignItems='flex-start'>
@@ -28,4 +28,4 @@ const Ravatar = ({name, staricon, imageSrc}) => {
     )
 }
 
-export default Ravatar;
+export default Avatar;

@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import { specials } from "../data";
+import { specials } from "../lib/data";
 import {
     Button,
     Box,
