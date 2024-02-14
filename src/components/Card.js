@@ -1,3 +1,5 @@
+import React from "react";
+import { MdBikeScooter } from 'react-icons/md';
 import {
   Box,
   Heading,
@@ -8,8 +10,6 @@ import {
   Stack,
   Icon
   } from "@chakra-ui/react";
-import { MdBikeScooter } from 'react-icons/md'
-import React from "react";
 
 const Card = ({ price, title, description, imageSrc }) => {
 

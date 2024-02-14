@@ -1,33 +1,12 @@
 import React from "react";
-import { Button, Box, Text, HStack, Stack} from "@chakra-ui/react";
-import Greeksalad from "../images/greek-salad.png"
-import Bruchetta from "../images/cheese-bruchetta.png"
-import Lemondessert from "../images/lemon-dessert.jpg"
 import Card from "./Card";
-
-const specials = [
-    {
-        title: "Greek salad",
-        price: "$ 12.99",
-        description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-        imageSrc: Greeksalad,
-    },
-    {
-        title: "Bruchetta",
-        price: "$ 5.99",
-        description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-        imageSrc: Bruchetta,
-    },
-    {
-        title: "Lemon dessert",
-        price: "$ 4.99",
-        description:
-        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.",
-        imageSrc: Lemondessert,
-    }
-];
+import { specials } from "../data";
+import {
+    Button,
+    Box,
+    Text,
+    HStack,
+    Stack} from "@chakra-ui/react";
 
 const Highlights = () => {
     return (
@@ -53,13 +32,13 @@ const Highlights = () => {
                     direction={['column', 'column', 'row']}
                     justify='center'
                 >
-                        {specials.map((specials) => (
+                        {specials.map((special) => (
                         <Card
-                            price={specials.price}
-                            key={specials.title}
-                            title={specials.title}
-                            description={specials.description}
-                            imageSrc={specials.imageSrc}
+                            price={special.price}
+                            key={special.title}
+                            title={special.title}
+                            description={special.description}
+                            imageSrc={special.imageSrc}
                         />
                         ))}
                 </Stack>

@@ -1,4 +1,5 @@
 import React from "react";
+import CheckmarkImg from '../images/checkmark.png';
 import {
     Stack,
     VStack,
@@ -7,8 +8,6 @@ import {
     ChakraProvider,
     Heading
 } from "@chakra-ui/react";
-
-import CheckmarkImg from '../images/checkmark.png';
 
 const ConfirmedBooking = ({time, date}) => {
     return (

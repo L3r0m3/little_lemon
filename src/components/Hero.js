@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../images/four-bruchetta2.png"
+import HeroImage from "../images/four-bruchetta2.png";
 import {
     Button,
     Heading,

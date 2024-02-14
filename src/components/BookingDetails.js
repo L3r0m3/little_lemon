@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Icon } from '@chakra-ui/react';
+import { MdCreditCard } from 'react-icons/md';
 import {
   Box,
   Button,
@@ -15,9 +16,6 @@ import {
   NumberInputField,
   ChakraProvider,
 } from "@chakra-ui/react";
-import { Icon } from '@chakra-ui/react'
-import { MdCreditCard } from 'react-icons/md'
-
 
 const BookingDetails = ({time,date, SubmitForm, state}) => {
 

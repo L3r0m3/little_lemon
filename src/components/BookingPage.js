@@ -1,5 +1,9 @@
-import {React} from 'react';
-
+import { React } from 'react';
+import TableImage from '../images/little-table.jpg';
+import TableSvg1 from '../images/dining-table1.png';
+import TableSvg2 from '../images/dining-table.png';
+import NewYork from '../images/newyork.jpg';
+import BookingForm from './BookingForm';
 import {
     ChakraProvider,
     Image,
@@ -10,12 +14,6 @@ import {
     Flex,
     HStack,
   } from "@chakra-ui/react";
-
-import TableImage from '../images/little-table.jpg';
-import TableSvg1 from '../images/dining-table1.png';
-import TableSvg2 from '../images/dining-table.png';
-import NewYork from '../images/newyork.jpg';
-import BookingForm from './BookingForm';
 
 
 const BookingPage = ({availableTimes, SubmitForm, state, dispatch, handleChange}) => {

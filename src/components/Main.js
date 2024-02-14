@@ -13,7 +13,6 @@ import ConfirmedBooking from "./ConfirmedBooking";
 
 const Main = () => {
 
-
     const initializeTimes = {
         date: '',
         time: '',
@@ -23,12 +22,10 @@ const Main = () => {
         env: 'Standard',
     };
 
-
     const [state, dispatch] = useReducer(updateTimes, initializeTimes);
     const [availableTimes, setAvailableTimes] = useState([]);
 
     const navigate = useNavigate();
-
 
     const fetchAPI = (date) => {
         fetch(`../apiData.json`)
@@ -90,7 +87,7 @@ const Main = () => {
     }
   }
 
-  useEffect(() => console.log(state), [state]);
+  // useEffect(() => console.log(state), [state]);
 
   const handleChange = (e) => {
     const { dataset: { dispatchtype }, value } = e.target;
@@ -100,7 +97,6 @@ const Main = () => {
       updateDateTimes(value);
     }
   };
-
 
   const SubmitForm = async (e) => {
     e.preventDefault();

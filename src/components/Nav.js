@@ -1,3 +1,5 @@
+import Logo from '../images/little_logo.png';
+import { NavItem } from '../data';
 import {
   Box,
   Flex,
@@ -21,7 +23,6 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
-import Logo from '../images/little_logo.png'
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
@@ -241,45 +242,3 @@ const MobileNavItem = ({ label, children, href }) => {
     </Stack>
   );
 };
-
-
-const NavItem = [
-  {
-    id: 1,
-    label: 'Home',
-    href: '/'
-  },
-  {
-    id: 2,
-    label: 'About',
-    href:'#'
-  },
-  {
-    id: 3,
-    label: 'Reservation',
-    children: [
-      { id: 5,
-        subLabel: 'Reserve a table',
-        href: '/booking',
-      },
-      { id: 6,
-        subLabel: 'Cancel reservation',
-        href: '#',
-      },
-    ],
-  },
-
-  {
-    id: 4,
-    label: 'Order Online',
-    children: [
-      { id: 7,
-        label: 'Online Menu',
-        subLabel: 'Online Menu',
-        href: '#',
-      },
-    ],
-  },
-];
-
-

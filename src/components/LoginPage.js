@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-
 import {
     Box,
     Heading,
@@ -18,12 +17,11 @@ import {
     InputGroup,
     InputRightElement
     } from "@chakra-ui/react";
-
-    import {GoogleIcon,
-         FacebookIcon,
-         AppleIcon,
-         LinkedinIcon
-        } from '../Icons/SocialIcon';
+import {GoogleIcon,
+        FacebookIcon,
+        AppleIcon,
+        LinkedinIcon
+    } from '../Icons/SocialIcon';
 
 const LoginPage = () => {
         const [input, setInput] = useState('');
