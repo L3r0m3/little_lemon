@@ -1,11 +1,11 @@
-import StarIcon from "./images/staricon.png";
-import Ashanty from "./images/ashanty.png";
-import Lee from "./images/lee.png";
-import Paul from "./images/paul.png";
-import Bella from "./images/bella.png";
-import Greeksalad from "./images/greek-salad.png";
-import Bruchetta from "./images/cheese-bruchetta.png";
-import Lemondessert from "./images/lemon-dessert.jpg";
+import StarIcon from "../images/staricon.png";
+import Ashanty from "../images/ashanty.png";
+import Lee from "../images/lee.png";
+import Paul from "../images/paul.png";
+import Bella from "../images/bella.png";
+import Greeksalad from "../images/greek-salad.png";
+import Bruchetta from "../images/cheese-bruchetta.png";
+import Lemondessert from "../images/lemon-dessert.jpg";
 
 export const propavatar = [
     {   id: 1,

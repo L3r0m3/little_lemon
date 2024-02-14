@@ -1,5 +1,5 @@
 import Logo from '../images/little_logo.png';
-import { NavItem } from '../data';
+import { NavItem } from '../lib/data';
 import {
   Box,
   Flex,
