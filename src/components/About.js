@@ -1,7 +1,13 @@
 import React from "react";
-import { Heading, Image, Box, Text, Stack, VStack} from "@chakra-ui/react";
 import Adrian from '../images/Adrian.jpg';
 import Mario from '../images/Mario.jpg';
+import {
+    Heading,
+    Image,
+    Box,
+    Text,
+    Stack,
+    VStack} from "@chakra-ui/react";
 
 const About = () => {
      return (

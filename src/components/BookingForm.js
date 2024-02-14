@@ -10,11 +10,7 @@ import { FormControl,
      FormErrorMessage
      } from "@chakra-ui/react";
 
-
-
 const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
-
-
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -78,7 +74,7 @@ const BookingForm = ({availableTimes, SubmitForm, state, handleChange}) => {
                         >
                          {availableTimes?.map((availableTime) => (
                          <option data-testid="res-time"
-                         value={availableTime} 
+                         value={availableTime}
                          key={availableTime}>{availableTime}
                          </option>
                         ))}

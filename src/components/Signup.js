@@ -1,5 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
+import * as Yup from 'yup';
+import useSubmit from '../hooks/useSubmit.js';
 import {
   Box,
   Button,
@@ -13,13 +15,9 @@ import {
   Stack,
   ChakraProvider,
 } from "@chakra-ui/react";
-import * as Yup from 'yup';
-import useSubmit from '../hooks/useSubmit.js'
-
 
 const Signup = () => {
   const { isLoading, submit } = useSubmit();
-
 
   const formik = useFormik({
     initialValues: {
@@ -41,7 +39,6 @@ const Signup = () => {
       .min(25, "Must be at least 25 characters")
     }),
   });
-
 
   return (
     <ChakraProvider>

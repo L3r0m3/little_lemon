@@ -1,5 +1,11 @@
 import React from "react";
-import {Image, Box, Text, HStack, VStack,Stack} from "@chakra-ui/react";
+import {
+    Image,
+    Box,
+    Text,
+    HStack,
+    VStack,
+    Stack } from "@chakra-ui/react";
 
 const Ravatar = ({name, staricon, imageSrc}) => {
     return (
