@@ -4,6 +4,7 @@ import Highlights from "../components/Highlights.js";
 import Testimonials from '../components/Testimonials';
 import About from '../components/About';
 import { ChakraProvider } from "@chakra-ui/react";
+//import Switch from "../theme/Switch.js";
 
 const Homepage = () => {
     return (
